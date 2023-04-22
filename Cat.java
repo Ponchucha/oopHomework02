@@ -29,12 +29,12 @@ public class Cat {
         if(food >= this.appetite){
             this.fullness = true;
             System.out.printf("Cat named %s is full and happy\n", name);
+            return food - appetite;
         }
         else{
             this.fullness = false;
             System.out.printf("Cat named %s is still hungry", this.name);
+            return food;
         }
-        return food - appetite; /*правильнее было бы возвращать 0, если еды не хватило. 
-        Но по условию надо сделать ограничение на отрицательные числа в тарелке. Поэтому так */ 
     }
 }
